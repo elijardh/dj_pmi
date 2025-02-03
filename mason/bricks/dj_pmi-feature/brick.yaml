@@ -1,0 +1,8 @@
+name: dj_pmi-feature
+description: A brick for creating feature files in the dj_pmi 2.0 project
+version: 0.1.0+1
+vars:
+  featureName:
+    type: string
+    description: The name of the feature you're trying to build
+    default: newService
