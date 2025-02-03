@@ -8,14 +8,18 @@ final darkTheme = ThemeData(
   brightness: Brightness.dark,
   scaffoldBackgroundColor: _colorStyle.background,
   menuTheme: MenuThemeData(
-      style: MenuStyle(
-          backgroundColor: WidgetStatePropertyAll(_colorStyle.background))),
+    style: MenuStyle(
+      backgroundColor: WidgetStatePropertyAll(
+        _colorStyle.background.withValues(alpha: 0.05),
+      ),
+    ),
+  ),
   iconTheme: IconThemeData(
     color: _colorStyle.foreground,
   ),
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
-    fillColor: _colorStyle.background,
+    fillColor: _colorStyle.background.withValues(alpha: 0.11),
     disabledBorder: OutlineInputBorder(
         borderSide: BorderSide(
       color: _colorStyle.border,
@@ -37,7 +41,7 @@ final darkTheme = ThemeData(
   ),
   primaryColor: _colorStyle.brandBackground,
   colorScheme: ColorScheme.dark(
-    onPrimary: _colorStyle.brandForeground,
+    onPrimary: _colorStyle.foreground,
     surface: _colorStyle.background,
     tertiary: _colorStyle.foreground,
     secondary: _colorStyle.foreground,
@@ -54,8 +58,10 @@ final darkTheme = ThemeData(
   menuBarTheme: MenuBarThemeData(
       style: MenuStyle(
           backgroundColor: WidgetStatePropertyAll(_colorStyle.background))),
-  cardTheme: CardTheme(color: _colorStyle.background),
-  dialogBackgroundColor: _colorStyle.background,
+  cardTheme: CardTheme(
+    color: _colorStyle.background.withValues(alpha: 0.11),
+  ),
+  dialogBackgroundColor: _colorStyle.background.withValues(alpha: 0.11),
   disabledColor: _colorStyle.border,
   textTheme: textTheme.apply(
     bodyColor: _colorStyle.foreground,
