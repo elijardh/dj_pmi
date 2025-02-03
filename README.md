@@ -1,4 +1,4 @@
-# dj_pmi 2.0 Flutter Application
+# dj_pmi Flutter Application
 
 Welcome to the **dj_pmi 2.0 Flutter Application**, the next-generation version of the dj_pmi app, which has over a million downloads on the Play Store. This project is built using modern Flutter development principles and adheres to industry best practices.
 
@@ -10,7 +10,6 @@ The application follows the **MVVM (Model-View-ViewModel)** architecture, ensuri
 
 - **Provider**: For state management.
 - **Get_it**: For dependency injection.
-- **Localization**: Ensures support for multiple languages.
 - **Build_runner**: Used to auto-generate assets, fonts, and other necessary files.
 
 ### Project Features
@@ -30,7 +29,7 @@ To maintain the quality and scalability of the project, the following rules are 
    flutter analyze
    ```
 3. **Comments and Logs**:
-   - Do not commit comments or debugging logs (`print` statements, `debugPrint`, etc.) to the repository.
+   - Do not commit debugging logs (`print` statements, `debugPrint`, etc.) to the repository.
 4. **Imports**: Use **absolute/package** imports instead of relative imports. Ensure to use a barrel file that has the file instead of individual imports
 5. **Barrel files**: Use barrel files to export files from the same layer in groups
 
@@ -57,7 +56,7 @@ Ensure you have the following installed:
 
 ```bash
 git clone <repository_url>
-cd dj_pmi_mobile
+cd dj_pmi
 ```
 
 ### Install Dependencies
@@ -104,7 +103,6 @@ The project follows a structured directory format:
 lib/
 ├── core/               # Core utilities
 ├── common/             # Shared utilities and services
-├── l10n/ # Localization files
 ├── features/           # Contains datasources, repositories, viewmodels and classes as pertaining to features
 ├── main.dart           # Entry point for the all environments
 ```
