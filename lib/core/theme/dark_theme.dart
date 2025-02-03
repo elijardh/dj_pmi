@@ -6,19 +6,19 @@ final _colorStyle = DarkColors();
 
 final darkTheme = ThemeData(
   brightness: Brightness.dark,
-  scaffoldBackgroundColor: _colorStyle.background1,
+  scaffoldBackgroundColor: _colorStyle.background,
   menuTheme: MenuThemeData(
       style: MenuStyle(
-          backgroundColor: WidgetStatePropertyAll(_colorStyle.background2))),
+          backgroundColor: WidgetStatePropertyAll(_colorStyle.background))),
   iconTheme: IconThemeData(
     color: _colorStyle.foreground,
   ),
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
-    fillColor: _colorStyle.background2,
+    fillColor: _colorStyle.background,
     disabledBorder: OutlineInputBorder(
         borderSide: BorderSide(
-      color: _colorStyle.foregroundDisabled,
+      color: _colorStyle.border,
     )),
     focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(
@@ -38,25 +38,25 @@ final darkTheme = ThemeData(
   primaryColor: _colorStyle.brandBackground,
   colorScheme: ColorScheme.dark(
     onPrimary: _colorStyle.brandForeground,
-    surface: _colorStyle.background1,
-    tertiary: _colorStyle.foreground2,
-    secondary: _colorStyle.foreground1,
+    surface: _colorStyle.background,
+    tertiary: _colorStyle.foreground,
+    secondary: _colorStyle.foreground,
     onSurface: _colorStyle.foreground,
   ),
   buttonTheme: ButtonThemeData(
       textTheme: ButtonTextTheme.normal,
       buttonColor: _colorStyle.brandBackground,
-      disabledColor: _colorStyle.foregroundDisabled,
+      disabledColor: _colorStyle.border,
       colorScheme: ColorScheme.dark(
         onPrimary: _colorStyle.foreground,
       )),
-  dialogTheme: DialogTheme(backgroundColor: _colorStyle.background2),
+  dialogTheme: DialogTheme(backgroundColor: _colorStyle.background),
   menuBarTheme: MenuBarThemeData(
       style: MenuStyle(
-          backgroundColor: WidgetStatePropertyAll(_colorStyle.background2))),
-  cardTheme: CardTheme(color: _colorStyle.background1),
-  dialogBackgroundColor: _colorStyle.background2,
-  disabledColor: _colorStyle.foregroundDisabled,
+          backgroundColor: WidgetStatePropertyAll(_colorStyle.background))),
+  cardTheme: CardTheme(color: _colorStyle.background),
+  dialogBackgroundColor: _colorStyle.background,
+  disabledColor: _colorStyle.border,
   textTheme: textTheme.apply(
     bodyColor: _colorStyle.foreground,
     displayColor: _colorStyle.foreground,
