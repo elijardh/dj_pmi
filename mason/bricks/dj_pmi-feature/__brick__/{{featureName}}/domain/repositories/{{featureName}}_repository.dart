@@ -1,11 +1,11 @@
-import 'package:dj_pmi/common/dependency_injection/locator.dart';
+import 'package:dj_pmi/common/dependency_injection/service_locator.dart';
 import 'package:dj_pmi/common/exception/dj_exception.dart';
-import 'package:dj_pmi/features/{{featureName}}/data/datasources/{{featureName}}_datasource.dart';
+import 'package:dj_pmi/features/{{featureName}}/data/api/{{featureName}}_api.dart';
 import 'package:dj_pmi/features/{{featureName}}/data/models/{{featureName}}_response.dart';
 import 'package:dio/dio.dart';
 
 class {{featureName.pascalCase()}}Repository {
-  final dataSource = locator<{{featureName.pascalCase()}}Datasource>();
+  final dataSource = ServiceLocator.serviceLocator<{{featureName.pascalCase()}}Api>();
 
   Future<{{featureName.pascalCase()}}Response> get() async {
     try {

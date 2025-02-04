@@ -1,4 +1,4 @@
-import 'package:dj_pmi/common/dependency_injection/locator.dart';
+import 'package:dj_pmi/common/dependency_injection/service_locator.dart';
 import 'package:dj_pmi/internal/local_storage/storage.dart';
 
 abstract class AuthProvider {
@@ -12,7 +12,7 @@ abstract class AuthProvider {
 }
 
 class AuthProviderImpl extends AuthProvider {
-  final _storage = locator<LocalStorage>();
+  final _storage = ServiceLocator.serviceLocator<LocalStorage>();
 
   @override
   Future<Map> getUserInfo() {

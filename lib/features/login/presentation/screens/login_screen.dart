@@ -1,6 +1,6 @@
 import 'package:dj_pmi/common/extensions/theme.dart';
 import 'package:dj_pmi/common/gen/assets.gen.dart';
-import 'package:dj_pmi/features/login/presentation/viewmodels/login_viewmodel.dart';
+import 'package:dj_pmi/features/login/domain/viewmodels/login_viewmodel.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

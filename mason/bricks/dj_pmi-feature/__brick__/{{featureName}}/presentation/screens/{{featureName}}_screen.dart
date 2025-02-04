@@ -1,5 +1,5 @@
 import 'package:dj_pmi/common/gen/assets.gen.dart';
-import 'package:dj_pmi/features/{{featureName}}/presentation/viewmodels/{{featureName}}_viewmodel.dart';
+import 'package:dj_pmi/features/{{featureName}}/domain/viewmodels/{{featureName}}_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';

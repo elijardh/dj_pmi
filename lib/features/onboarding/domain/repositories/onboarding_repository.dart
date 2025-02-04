@@ -1,11 +1,11 @@
-import 'package:dj_pmi/common/dependency_injection/locator.dart';
+import 'package:dj_pmi/common/dependency_injection/service_locator.dart';
 import 'package:dj_pmi/common/exception/dj_exception.dart';
-import 'package:dj_pmi/features/onboarding/data/datasources/onboarding_datasource.dart';
+import 'package:dj_pmi/features/onboarding/data/api/onboarding_api.dart';
 import 'package:dj_pmi/features/onboarding/data/models/onboarding_response.dart';
 import 'package:dio/dio.dart';
 
 class OnboardingRepository {
-  final dataSource = locator<OnboardingDatasource>();
+  final dataSource = ServiceLocator.serviceLocator<OnboardingApi>();
 
   Future<OnboardingResponse> get() async {
     try {

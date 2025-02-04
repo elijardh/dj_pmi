@@ -1,5 +1,5 @@
 import 'package:dj_pmi/common/gen/assets.gen.dart';
-import 'package:dj_pmi/features/onboarding/presentation/viewmodels/onboarding_viewmodel.dart';
+import 'package:dj_pmi/features/onboarding/domain/viewmodels/onboarding_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

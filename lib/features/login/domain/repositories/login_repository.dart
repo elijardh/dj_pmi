@@ -1,11 +1,11 @@
-import 'package:dj_pmi/common/dependency_injection/locator.dart';
+import 'package:dj_pmi/common/dependency_injection/service_locator.dart';
 import 'package:dj_pmi/common/exception/dj_exception.dart';
-import 'package:dj_pmi/features/login/data/datasources/login_datasource.dart';
+import 'package:dj_pmi/features/login/data/api/login_api.dart';
 import 'package:dj_pmi/features/login/data/models/login_res.dart';
 import 'package:dio/dio.dart';
 
 class LoginRepository {
-  final dataSource = locator<LoginDatasource>();
+  final dataSource = ServiceLocator.serviceLocator<LoginApi>();
 
   Future<LoginResponse> login(Map<String, dynamic> data) async {
     try {
