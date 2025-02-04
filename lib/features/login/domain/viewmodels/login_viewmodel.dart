@@ -5,7 +5,7 @@ import 'package:dj_pmi/features/login/domain/repositories/login_repository.dart'
 import 'package:flutter/cupertino.dart';
 
 class LoginViewmodel extends ChangeNotifier {
-  final repository = locator<LoginRepository>();
+  final repository = ServiceLocator.serviceLocator<LoginRepository>();
 
   UIState _uiState = UIState();
 

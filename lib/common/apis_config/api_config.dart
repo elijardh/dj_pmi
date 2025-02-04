@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 class ApiConfig {
   static Dio get() {
     final options = BaseOptions(
-      baseUrl: Configuration.getBaseUrl,
+      baseUrl: Configurations.baseUrl,
       connectTimeout: const Duration(seconds: 5),
       receiveTimeout: const Duration(seconds: 3),
     );
