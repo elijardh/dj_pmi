@@ -1,4 +1,4 @@
-import 'package:dj_pmi/common/routes/routes.dart';
+import 'package:dj_pmi/core/routes/routes.dart';
 import 'package:dj_pmi/core/theme/dark_theme.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
