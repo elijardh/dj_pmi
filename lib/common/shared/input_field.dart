@@ -145,10 +145,11 @@ class InputField extends StatelessWidget {
                         TextSpan(
                           text: '$label',
                           style: lableStyle ??
-                              Theme.of(context)
-                                  .textTheme
-                                  .bodySmall
-                                  ?.copyWith(fontSize: 12.sp),
+                              Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                    fontSize: 14.sp,
+                                    color: context
+                                        .appColorsDark.highContrastForeground,
+                                  ),
                         ),
                       ],
                     ),
@@ -184,10 +185,9 @@ class InputField extends StatelessWidget {
                 filled: true,
                 fillColor: getColor(context),
                 hintText: placeHolder,
-                hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: Colors.grey,
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w400,
+                hintStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: context.appColorsDark.lowContrastForeground,
+                      fontSize: 14.sp,
                     ),
                 contentPadding: const EdgeInsets.fromLTRB(15, 20, 10, 10),
                 enabledBorder: underline
@@ -197,8 +197,8 @@ class InputField extends StatelessWidget {
                     : OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.r),
                         borderSide: const BorderSide(
-                          color: Color.fromRGBO(204, 204, 204, 1),
-                          width: 1,
+                          color: Color(0xFF2D2D2D),
+                          width: 1.5,
                         ),
                       ),
                 border: underline
@@ -207,15 +207,15 @@ class InputField extends StatelessWidget {
                       )
                     : OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.r),
-                        borderSide: const BorderSide(
-                          color: Color.fromRGBO(204, 204, 204, 1),
+                        borderSide: BorderSide(
+                          color: context.appColorsDark.highContrastForeground,
                           width: 1,
                         ),
                       ),
                 focusedBorder: underline
                     ? UnderlineInputBorder(
                         borderSide: BorderSide(
-                          color: Theme.of(context).primaryColor,
+                          color: context.appColorsDark.highContrastForeground,
                           width: 0.5,
                         ),
                       )
@@ -271,8 +271,8 @@ class InputField extends StatelessWidget {
       return OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
         borderSide: BorderSide(
-          color: Theme.of(context).colorScheme.primary,
-          width: 1.0,
+          color: context.appColorsDark.highContrastForeground,
+          width: 2.0,
         ),
       );
     }
@@ -287,7 +287,7 @@ class InputField extends StatelessWidget {
     } else if (underline) {
       return Colors.transparent;
     } else {
-      return Colors.white;
+      return Color(0xFF1A1A1A);
     }
   }
 }

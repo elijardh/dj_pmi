@@ -1,20 +1,20 @@
-import 'package:dj_pmi/core/routes/routes.dart';
-import 'package:flutter/material.dart';
 import 'package:dj_pmi/common/common.dart';
+import 'package:dj_pmi/core/routes/routes.dart';
 import 'package:dj_pmi/features/authentication/presentation/widgets/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class OnboardingScreen extends StatelessWidget {
-  const OnboardingScreen({super.key});
+class ArtistActionScreen extends StatelessWidget {
+  const ArtistActionScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const OnboardingScreenContent();
+    return const ArtistActionScreenContent();
   }
 }
 
-class OnboardingScreenContent extends StatelessWidget {
-  const OnboardingScreenContent({super.key});
+class ArtistActionScreenContent extends StatelessWidget {
+  const ArtistActionScreenContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class OnboardingScreenContent extends StatelessWidget {
           SizedBox(
               width: MediaQuery.sizeOf(context).width,
               height: MediaQuery.sizeOf(context).height,
-              child: Assets.pngs.onboardingScreenBackground.image(
+              child: Assets.pngs.artistActionScreenBackground.image(
                 fit: BoxFit.cover,
               )),
           Container(
@@ -63,7 +63,7 @@ class OnboardingScreenContent extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Text(
-                        'Bringing Artists and DJs together one track at a time.',
+                        'For Artists Who \nMake Music.',
                         style: context.headlineLarge.copyWith(
                           fontSize: 27.sp,
                         ),
@@ -71,21 +71,18 @@ class OnboardingScreenContent extends StatelessWidget {
                       ),
                       30.verticalSpace,
                       Button(
-                        onPressed: () => context.push(
-                          Routes.artist_action_screen,
-                        ),
-                        text: 'Create artist profile',
-                        buttonColor: Colors.white,
-                        buttonNameColor: context.appColorsDark.background,
+                        onPressed: () {},
+                        text: 'Create account',
+                        buttonColor: context.primaryColor,
                       ),
-                      10.verticalSpace,
-                      Button(
-                        onPressed: () => context.push(
-                          Routes.dj_action_screen,
+                      30.verticalSpace,
+                      Center(
+                        child: Button(
+                          onPressed: () => context.push(Routes.sign_in_screen),
+                          text: 'Login',
+                          buttonNameColor: Colors.white,
+                          textButton: true,
                         ),
-                        text: 'Create DJ profile',
-                        buttonNameColor: context.appColorsDark.background,
-                        buttonColor: Colors.white,
                       ),
                       30.verticalSpace,
                     ],

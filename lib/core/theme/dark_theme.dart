@@ -39,8 +39,11 @@ final darkTheme = ThemeData(
       ),
     ),
   ),
+  primaryColorDark: _colorStyle.brandBackground,
+  primaryColorLight: _colorStyle.brandBackground,
   primaryColor: _colorStyle.brandBackground,
   colorScheme: ColorScheme.dark(
+    primary: _colorStyle.brandBackground,
     onPrimary: _colorStyle.foreground,
     surface: _colorStyle.background,
     tertiary: _colorStyle.foreground,
@@ -48,12 +51,13 @@ final darkTheme = ThemeData(
     onSurface: _colorStyle.foreground,
   ),
   buttonTheme: ButtonThemeData(
-      textTheme: ButtonTextTheme.normal,
-      buttonColor: _colorStyle.brandBackground,
-      disabledColor: _colorStyle.border,
-      colorScheme: ColorScheme.dark(
-        onPrimary: _colorStyle.foreground,
-      )),
+    textTheme: ButtonTextTheme.normal,
+    buttonColor: _colorStyle.brandBackground,
+    disabledColor: _colorStyle.border,
+    colorScheme: ColorScheme.dark(
+      onPrimary: _colorStyle.foreground,
+    ),
+  ),
   dialogTheme: DialogTheme(backgroundColor: _colorStyle.background),
   menuBarTheme: MenuBarThemeData(
       style: MenuStyle(

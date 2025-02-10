@@ -22,4 +22,16 @@ class DarkColors extends ColorStyles {
 
   @override
   Color get redBackground => DjColors.secondaryColors.red.redBackground;
+
+  @override
+  Color get highContrastForeground =>
+      DjColors.neutralColors.highContrastForeground;
+
+  @override
+  Color get lowContrastForeground =>
+      DjColors.neutralColors.lowContrastForeground;
+
+  @override
+  Color get midContrastForeground =>
+      DjColors.neutralColors.midContrastForeground;
 }

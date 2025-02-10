@@ -24,4 +24,13 @@ class LightColors extends ColorStyles {
 
   @override
   Color get redBackground => DjColors.secondaryColors.red.redBackground;
+
+  @override
+  Color get highContrastForeground => DjColors.neutralColors.defaultForeground;
+
+  @override
+  Color get lowContrastForeground => DjColors.neutralColors.defaultForeground;
+
+  @override
+  Color get midContrastForeground => DjColors.neutralColors.defaultForeground;
 }

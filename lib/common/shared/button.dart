@@ -46,9 +46,7 @@ class Button extends StatelessWidget {
               )
             : Text(
                 text,
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      fontWeight: FontWeight.w600,
-                      fontFamily: 'IBMPlexMono',
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       decorationColor: buttonNameColor ??
                           Theme.of(context).colorScheme.primary,
                       decoration: (textButtonUnderline ?? false)
