@@ -9,7 +9,7 @@ class DjColors {
 class NeutralColors {
   NeutralColors();
   final defaultForeground = Color(0xFFFFFFFF);
-  final defaultBackground = Color(0xFF111928);
+  final defaultBackground = Color(0xFF0E0E0E);
   final borderColor = Color(0xFF2D2D2D);
 }
 
