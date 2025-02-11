@@ -27,6 +27,7 @@ class SecondaryColors {
   SecondaryColors();
   Red red = Red();
   Green green = Green();
+  final secondary = Color(0xFF1A1A1A);
 }
 
 class Red {

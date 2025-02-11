@@ -7,6 +7,7 @@ abstract class ColorStyles {
   Color get highContrastForeground;
   Color get midContrastForeground;
   Color get lowContrastForeground;
+  Color get secondary;
 
   //Brand
   Color get brandBackground;

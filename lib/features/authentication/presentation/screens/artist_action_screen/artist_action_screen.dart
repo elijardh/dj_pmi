@@ -71,7 +71,7 @@ class ArtistActionScreenContent extends StatelessWidget {
                       ),
                       30.verticalSpace,
                       Button(
-                        onPressed: () {},
+                        onPressed: () => context.push(Routes.sign_up_screen),
                         text: 'Create account',
                         buttonColor: context.primaryColor,
                       ),

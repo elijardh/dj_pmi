@@ -34,4 +34,6 @@ class DarkColors extends ColorStyles {
   @override
   Color get midContrastForeground =>
       DjColors.neutralColors.midContrastForeground;
+  @override
+  Color get secondary => DjColors.secondaryColors.secondary;
 }

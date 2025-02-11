@@ -47,7 +47,7 @@ final darkTheme = ThemeData(
     onPrimary: _colorStyle.foreground,
     surface: _colorStyle.background,
     tertiary: _colorStyle.foreground,
-    secondary: _colorStyle.foreground,
+    secondary: _colorStyle.secondary,
     onSurface: _colorStyle.foreground,
   ),
   buttonTheme: ButtonThemeData(
