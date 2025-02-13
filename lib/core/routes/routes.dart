@@ -64,6 +64,12 @@ final routes = GoRouter(
       },
     ),
     GoRoute(
+      path: Routes.dashboard_screen,
+      builder: (context, state) {
+        return DashboardScreen();
+      },
+    ),
+    GoRoute(
       path: Routes.create_profile_screen,
       builder: (context, state) {
         final args = state.extra;
@@ -91,4 +97,5 @@ abstract class Routes {
   static String profile_type_screen = '/profile_type_screen';
   static String create_profile_screen = '/create_profile_screen';
   static String music_type_screen = '/music_type_screen';
+  static String dashboard_screen = '/dashboard_screen';
 }

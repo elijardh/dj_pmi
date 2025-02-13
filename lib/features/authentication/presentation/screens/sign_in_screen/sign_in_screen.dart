@@ -1,6 +1,8 @@
 import 'package:dj_pmi/common/common.dart';
+import 'package:dj_pmi/core/routes/routes.dart';
 import 'package:dj_pmi/features/authentication/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -45,7 +47,7 @@ class SignInScreen extends StatelessWidget {
               ),
               20.verticalSpace,
               Button(
-                onPressed: () {},
+                onPressed: () => context.push(Routes.dashboard_screen),
                 text: 'Log in',
               ),
               20.verticalSpace,

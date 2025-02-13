@@ -64,7 +64,7 @@ class _CreateProfileScreenContentState
       appBar: AppBar(),
       bottomNavigationBar: IntrinsicHeight(
         child: Padding(
-          padding: horizontalPadding(20),
+          padding: allPadding(20),
           child: Button(
             onPressed: () => context.push(Routes.music_type_screen),
             text: 'Next',

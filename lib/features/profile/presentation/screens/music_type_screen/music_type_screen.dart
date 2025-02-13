@@ -1,6 +1,8 @@
 import 'package:dj_pmi/common/common.dart';
+import 'package:dj_pmi/core/routes/routes.dart';
 import 'package:dj_pmi/features/profile/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class MusicTypeScreen extends StatelessWidget {
   const MusicTypeScreen({super.key});
@@ -20,9 +22,9 @@ class MusicTypeScreenContent extends StatelessWidget {
       appBar: AppBar(),
       bottomNavigationBar: IntrinsicHeight(
         child: Padding(
-          padding: horizontalPadding(20),
+          padding: allPadding(20),
           child: Button(
-            onPressed: () {},
+            onPressed: () => context.push(Routes.dashboard_screen),
             text: 'Save Selection',
           ),
         ),

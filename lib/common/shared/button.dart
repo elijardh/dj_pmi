@@ -15,6 +15,7 @@ class Button extends StatelessWidget {
   final bool? loading;
   final bool? disabled;
   final Color? loaderColor;
+  final Widget? child;
   const Button({
     super.key,
     this.loaderColor,
@@ -29,6 +30,7 @@ class Button extends StatelessWidget {
     this.textButton,
     this.textButtonUnderline,
     this.loading,
+    this.child,
   });
 
   @override
@@ -84,17 +86,21 @@ class Button extends StatelessWidget {
                 color: loaderColor,
               ),
             )
-          : Text(
-              text,
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14.sp,
-                    color: disabled!
-                        ? Theme.of(context).colorScheme.onPrimary.withAlpha(50)
-                        : buttonNameColor ??
-                            Theme.of(context).colorScheme.onPrimary,
-                  ),
-            ),
+          : child ??
+              Text(
+                text,
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14.sp,
+                      color: disabled!
+                          ? Theme.of(context)
+                              .colorScheme
+                              .onPrimary
+                              .withAlpha(50)
+                          : buttonNameColor ??
+                              Theme.of(context).colorScheme.onPrimary,
+                    ),
+              ),
     );
   }
 }
