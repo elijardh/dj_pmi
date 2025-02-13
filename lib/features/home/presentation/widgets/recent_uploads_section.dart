@@ -1,5 +1,7 @@
 import 'package:dj_pmi/common/common.dart';
+import 'package:dj_pmi/core/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class RecentUploadsSection extends StatefulWidget {
   const RecentUploadsSection({super.key});
@@ -89,31 +91,34 @@ class RecentUploadCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Assets.pngs.topSongPlaceholder.image(
-          height: 100.h,
-          width: 100.h,
-        ),
-        5.verticalSpace,
-        Text(
-          'Essence(feat. Tems)',
-          overflow: TextOverflow.ellipsis,
-          style: context.bodyLarge.copyWith(
-            fontSize: 14.sp,
+    return GestureDetector(
+      onTap: () => context.push(Routes.music_player_screen),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Assets.pngs.topSongPlaceholder.image(
+            height: 100.h,
+            width: 100.h,
           ),
-        ),
-        5.verticalSpace,
-        Text(
-          '4:00',
-          style: context.bodyMedium.copyWith(
-            fontSize: 12.sp,
-            color: context.appColorsDark.lowContrastForeground,
+          5.verticalSpace,
+          Text(
+            'Essence(feat. Tems)',
+            overflow: TextOverflow.ellipsis,
+            style: context.bodyLarge.copyWith(
+              fontSize: 14.sp,
+            ),
           ),
-        )
-      ],
+          5.verticalSpace,
+          Text(
+            '4:00',
+            style: context.bodyMedium.copyWith(
+              fontSize: 12.sp,
+              color: context.appColorsDark.lowContrastForeground,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
@@ -123,30 +128,33 @@ class RecentUploadsTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: verticalPadding(10),
-      child: Row(
-        children: [
-          Assets.pngs.topSongPlaceholder.image(
-            height: 48.h,
-            width: 48.h,
-          ),
-          10.horizontalSpace,
-          Text(
-            'Essence(feat. Tems)',
-            style: context.bodyLarge.copyWith(
-              fontSize: 14.sp,
+    return GestureDetector(
+      onTap: () => context.push(Routes.music_player_screen),
+      child: Padding(
+        padding: verticalPadding(10),
+        child: Row(
+          children: [
+            Assets.pngs.topSongPlaceholder.image(
+              height: 48.h,
+              width: 48.h,
             ),
-          ),
-          Spacer(),
-          Text(
-            '4:00',
-            style: context.bodyMedium.copyWith(
-              fontSize: 12.sp,
-              color: context.appColorsDark.lowContrastForeground,
+            10.horizontalSpace,
+            Text(
+              'Essence(feat. Tems)',
+              style: context.bodyLarge.copyWith(
+                fontSize: 14.sp,
+              ),
             ),
-          )
-        ],
+            Spacer(),
+            Text(
+              '4:00',
+              style: context.bodyMedium.copyWith(
+                fontSize: 12.sp,
+                color: context.appColorsDark.lowContrastForeground,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

@@ -70,6 +70,32 @@ final routes = GoRouter(
       },
     ),
     GoRoute(
+      path: Routes.music_player_screen,
+      pageBuilder: (context, state) {
+        return CustomTransitionPage(
+          key: state.pageKey,
+          child: MusicPlayerScreen(),
+          transitionDuration: const Duration(milliseconds: 1200),
+          reverseTransitionDuration: const Duration(milliseconds: 800),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            final tween =
+                Tween<Offset>(begin: Offset(0, 1), end: Offset.zero).chain(
+              CurveTween(
+                curve: animation.status == AnimationStatus.forward
+                    ? Curves.fastEaseInToSlowEaseOut
+                    : Curves.fastOutSlowIn,
+              ),
+            );
+            final offsetAnimation = animation.drive(tween);
+            return SlideTransition(
+              position: offsetAnimation,
+              child: child,
+            );
+          },
+        );
+      },
+    ),
+    GoRoute(
       path: Routes.create_profile_screen,
       builder: (context, state) {
         final args = state.extra;
@@ -98,4 +124,5 @@ abstract class Routes {
   static String create_profile_screen = '/create_profile_screen';
   static String music_type_screen = '/music_type_screen';
   static String dashboard_screen = '/dashboard_screen';
+  static String music_player_screen = '/music_player_screen';
 }
