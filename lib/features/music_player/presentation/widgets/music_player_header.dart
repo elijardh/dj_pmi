@@ -1,6 +1,5 @@
 import 'package:dj_pmi/common/common.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class MusicPlayerHeader extends StatelessWidget {
   final void Function(int index) onTap;
@@ -16,11 +15,8 @@ class MusicPlayerHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        GestureDetector(
-          onTap: () => context.pop(),
-          child: Icon(
-            Icons.keyboard_arrow_down,
-          ),
+        Icon(
+          Icons.keyboard_arrow_down,
         ),
         Row(
           children: [

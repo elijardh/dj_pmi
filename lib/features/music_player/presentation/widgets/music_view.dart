@@ -1,7 +1,7 @@
 import 'package:dj_pmi/common/common.dart';
 import 'package:flutter/material.dart';
 
-import 'action_button.dart';
+import '../../../../common/shared/action_button.dart';
 
 class MusicView extends StatelessWidget {
   const MusicView({super.key});

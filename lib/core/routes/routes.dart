@@ -4,7 +4,6 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:dj_pmi/common/models/models.dart';
 import 'package:dj_pmi/common/shared/shared.dart';
 import 'package:dj_pmi/features/features.dart';
-import 'package:dj_pmi/features/profile/domain/models/profile_type.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
@@ -66,7 +65,10 @@ final routes = GoRouter(
     GoRoute(
       path: Routes.dashboard_screen,
       builder: (context, state) {
-        return DashboardScreen();
+        var arg = state.extra;
+        return DashboardScreen(
+          profileType: arg as ProfileType,
+        );
       },
     ),
     GoRoute(

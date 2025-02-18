@@ -16,7 +16,11 @@ class ActionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        icon.svg(),
+        icon.svg(
+            colorFilter: ColorFilter.mode(
+          Colors.white,
+          BlendMode.srcIn,
+        )),
         if (title != null)
           Text(
             title ?? '',

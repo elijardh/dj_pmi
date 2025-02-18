@@ -1,4 +1,5 @@
 import 'package:dj_pmi/common/common.dart';
+import 'package:dj_pmi/common/models/models.dart';
 import 'package:dj_pmi/core/routes/routes.dart';
 import 'package:dj_pmi/features/profile/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,8 @@ class MusicTypeScreenContent extends StatelessWidget {
         child: Padding(
           padding: allPadding(20),
           child: Button(
-            onPressed: () => context.push(Routes.dashboard_screen),
+            onPressed: () => context.push(Routes.dashboard_screen,
+                extra: ProfileType.Artist),
             text: 'Save Selection',
           ),
         ),

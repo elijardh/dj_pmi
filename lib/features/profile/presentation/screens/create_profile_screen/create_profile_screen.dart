@@ -1,7 +1,7 @@
 import 'package:dj_pmi/common/common.dart';
+import 'package:dj_pmi/common/models/models.dart';
 import 'package:dj_pmi/common/utilties/custom_bottom_sheets.dart';
 import 'package:dj_pmi/core/routes/routes.dart';
-import 'package:dj_pmi/features/profile/domain/models/models.dart';
 import 'package:dj_pmi/features/profile/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

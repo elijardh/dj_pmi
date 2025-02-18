@@ -1,4 +1,5 @@
 import 'package:dj_pmi/common/common.dart';
+import 'package:dj_pmi/common/models/models.dart';
 import 'package:dj_pmi/core/routes/routes.dart';
 import 'package:dj_pmi/features/authentication/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +48,8 @@ class SignInScreen extends StatelessWidget {
               ),
               20.verticalSpace,
               Button(
-                onPressed: () => context.push(Routes.dashboard_screen),
+                onPressed: () => context.push(Routes.dashboard_screen,
+                    extra: ProfileType.DJ),
                 text: 'Log in',
               ),
               20.verticalSpace,

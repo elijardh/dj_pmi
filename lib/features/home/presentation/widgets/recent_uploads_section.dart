@@ -1,16 +1,60 @@
 import 'package:dj_pmi/common/common.dart';
+import 'package:dj_pmi/common/utilties/custom_bottom_sheets.dart';
 import 'package:dj_pmi/core/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class RecentUploadsSection extends StatefulWidget {
-  const RecentUploadsSection({super.key});
+class DjRecentUploadSection extends StatelessWidget {
+  const DjRecentUploadSection({super.key});
 
   @override
-  State<RecentUploadsSection> createState() => _RecentUploadsSectionState();
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Recent Uploads',
+              style: context.titleLarge.copyWith(
+                fontSize: 16.sp,
+              ),
+            ),
+            Text(
+              'See All',
+              style: context.titleLarge.copyWith(
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w700,
+              ),
+            )
+          ],
+        ),
+        10.verticalSpace,
+        SizedBox(
+          height: 150.h,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: List.generate(
+              10,
+              (index) => RecentUploadCard(),
+            ),
+          ),
+        )
+      ],
+    );
+  }
 }
 
-class _RecentUploadsSectionState extends State<RecentUploadsSection> {
+class ArtistRecentUploadsSection extends StatefulWidget {
+  const ArtistRecentUploadsSection({super.key});
+
+  @override
+  State<ArtistRecentUploadsSection> createState() =>
+      _ArtistRecentUploadsSectionState();
+}
+
+class _ArtistRecentUploadsSectionState
+    extends State<ArtistRecentUploadsSection> {
   bool isListView = true;
   @override
   Widget build(BuildContext context) {
@@ -129,7 +173,9 @@ class RecentUploadsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => context.push(Routes.music_player_screen),
+      onTap: () => showCustomDraggableBottomSheetTitle(
+        child: MusicPlayerBottomSheet(),
+      ),
       child: Padding(
         padding: verticalPadding(10),
         child: Row(

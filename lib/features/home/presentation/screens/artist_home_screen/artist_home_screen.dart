@@ -50,7 +50,7 @@ class ArtistActionScreenContent extends StatelessWidget {
               20.verticalSpace,
               TopSongSection(),
               20.verticalSpace,
-              RecentUploadsSection(),
+              ArtistRecentUploadsSection(),
             ],
           ),
         ),
